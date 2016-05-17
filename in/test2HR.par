@@ -1,0 +1,77 @@
+### Disk parameters
+
+AspectRatio     	0.0274796815058  #0.0345  #0.031933  #0.01885            Thickness over Radius in the disc
+#Sigma0			6.3661977237e-4	Surface Density at r=1
+#Sigma0                  2.1360381e-7 Surface Density at r=1
+Sigma0			142.4419924  #17.2
+#Viscosity		1e-5		Uniform kinematic viscosity
+Alphaviscosity		0.001
+SigmaSlope		0.6	Slope of surface density profile.
+FlaringIndex		0.05
+					#here constant.
+ADIABATIC		yes
+ADIABATICINDEX		1.4
+
+VISCOSITYRATIO		10.0
+
+dRtran                  0.015
+rtran                   0.085
+ratiotran               10.0
+
+CoolMethod 		2
+SubCool			no
+#Opacity			5.0
+
+Cooling			yes
+CoolingTime0		6.28
+
+OuterSourceMass		no
+#OUTERVR			-3.75e-6
+#INNERVR			-3.75e-6
+
+OUTERVR                5.0e-7
+INNERVR                 1.49e-6
+
+#OUTERVR			10.262
+#INNERVR                 30.316
+### Planet parameters
+
+#PlanetConfig		in/Jup.cfg
+PlanetConfig           in/1MG.cfg
+
+ThicknessSmoothing 	0.6		Smoothing parameters in disk thickness
+
+### Numerical method parameters
+
+Transport		FARGO
+InnerBoundary		E	choose : OPEN or RIGID or NONREFLECTING
+Disk			YES
+OmegaFrame     		1.0
+Frame			Guiding-Center
+IndirectTerm		YES
+
+
+### Mesh parameters
+
+Nrad			256 		Radial number of zones
+Nsec			594		Azimuthal number of zones (sectors)
+#Nrad			128			
+#Nsec			300
+#Nrad			512
+#Nsec			5
+
+Rmin			0.02		Inner boundary radius
+Rmax			0.3		Outer boundary radius
+RadialSpacing           Logarithmic      Zone interfaces evenly spaced
+
+#RadialSpacing 		Arithmetic      Zone interfaces evenly spaced
+
+
+
+### Output control parameters
+WRITEENERGY		yes
+Ntot			10001	Total number of time steps
+Ninterm	 		20	Time steps between outputs
+DT			0.314159265359	Time step length. 2PI = 1 orbit
+#OutputDir               newtest
+OutputDir		newtest_opa_tan_1MG_0001alphaHR
